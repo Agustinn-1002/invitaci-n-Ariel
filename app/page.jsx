@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import { Fade } from "react-awesome-reveal";
+import { Fade, Zoom } from "react-awesome-reveal";
 import { ParallaxBanner } from "react-scroll-parallax";
 import Time from "./components/Time";
 
@@ -24,8 +24,10 @@ export default function Home() {
           },
           {
             children: (
-              <Fade delay={100} triggerOnce={true} duration={800} className="absolute inset-0 flex items-center justify-center">
-                <Image src="/tituloBaner.png" alt="titulo banner" width={432} height={135} />
+              <Fade delay={100} triggerOnce={true} duration={1500} className="absolute inset-0 flex items-center justify-center">
+                <Zoom delay={100} triggerOnce={true} duration={1000}>
+                  <Image src="/tituloBaner.png" alt="titulo banner" width={439} height={250} />
+                </Zoom>
               </Fade>
             ),
             speed: -45,

@@ -59,7 +59,7 @@ export default function Time() {
               <span className="mx-1 sm:mx-3 text-gray-50 sm:text-3xl font-semibold">:</span>
 
               <div className="flex flex-col items-center justify-center bg-gray-50 w-16 h-16 sm:w-28 sm:h-28 rounded-full">
-                <span className="sm:ext-4xl text-gray-500">{hours}</span>
+                <span className="sm:text-4xl text-gray-500">{hours}</span>
                 <span className="text-red-300 sm:text-xl font-semibold">Hs</span>
               </div>
 
