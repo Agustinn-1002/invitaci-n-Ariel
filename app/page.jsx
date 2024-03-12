@@ -5,9 +5,10 @@ import { ParallaxBanner } from "react-scroll-parallax";
 import Time from "./components/Time";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { useMediaQuery } from 'react-responsive'
 
 export default function Home() {
-  let queryData = window.innerWidth
+  let queryData = useMediaQuery({ query: '(max-width: 1024px)' })
   console.log(queryData);
 
   return (
@@ -23,7 +24,7 @@ export default function Home() {
               className="filter brightness-75 w-full h-full"
             />,
             expanded: false,
-            speed: queryData <= 1024 ? 0 : -60,
+            speed: queryData ? 0 : -60,
           },
           {
             children: (
@@ -36,7 +37,7 @@ export default function Home() {
 
               </div>
             ),
-            speed: -30,
+            speed: queryData ? 0 : -30,
           },
         ]}
         className="h-screen"
