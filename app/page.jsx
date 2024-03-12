@@ -1,38 +1,112 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
-import { useEffect, useState } from "react";
 import Image from "next/image";
-import banerParallax from '@/public/banerParallax.jpg'
+import { useEffect, useState } from "react";
+import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
+import { Fade } from "react-awesome-reveal";
+
+
 
 export default function Home() {
-  const [offsetY, setOffsetY] = useState(0)
-  const handleScroll = () => setOffsetY(window.pageYOffset)
-  useEffect(()=>{
-    window.addEventListener('scroll', handleScroll)
-    return ()=>window.removeEventListener('scroll', handleScroll)
-  },[])
+
+  const [partyTime, setPartyTime] = useState(false);
+  const [days, setDays] = useState(0);
+  const [hours, setHours] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const [seconds, setSeconds] = useState(0);
+
+
+  useEffect(() => {
+    const target = new Date("05/01/2024 23:59:59");
+
+    const interval = setInterval(() => {
+      const now = new Date();
+      const difference = target.getTime() - now.getTime();
+
+      const d = Math.floor(difference / (1000 * 60 * 60 * 24));
+      setDays(d);
+
+      const h = Math.floor(
+        (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      setHours(h);
+
+      const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      setMinutes(m);
+
+      const s = Math.floor((difference % (1000 * 60)) / 1000);
+      setSeconds(s);
+
+      if (d <= 0 && h <= 0 && m <= 0 && s <= 0) {
+        setPartyTime(true);
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+
   return (
     <section>
-      <nav className="" style={{transform: `translateY(${offsetY * 0.8}px)`}}>
-        <Image src={banerParallax} className="top-0 left-0 h-screen w-full object-cover p-0 m-0" alt="holaaa"/>
-      </nav>
-      <main className="" style={{transform: `translateY(${offsetY * -0.02}px)`}}>
-        <div className="bg-gray-800 ">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab fugit facilis consequuntur necessitatibus expedita aut eaque, minima blanditiis porro architecto repellat illum ea quisquam sequi incidunt exercitationem iste vero perspiciatis ducimus ipsam, ex accusamus quos consequatur? Accusantium ducimus, voluptatibus pariatur eius repudiandae ut. Impedit nihil, reprehenderit obcaecati tempore odit sunt. Excepturi, totam, quaerat distinctio commodi recusandae voluptatibus cum voluptatum placeat aperiam ut nulla ducimus tempore, itaque officiis eaque error porro ipsa ipsam. A provident debitis laboriosam accusamus blanditiis ducimus aspernatur ipsam repellat cupiditate. Autem iste quibusdam qui distinctio. Necessitatibus aliquam itaque deleniti illo at inventore molestiae doloribus atque praesentium.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab fugit facilis consequuntur necessitatibus expedita aut eaque, minima blanditiis porro architecto repellat illum ea quisquam sequi incidunt exercitationem iste vero perspiciatis ducimus ipsam, ex accusamus quos consequatur? Accusantium ducimus, voluptatibus pariatur eius repudiandae ut. Impedit nihil, reprehenderit obcaecati tempore odit sunt. Excepturi, totam, quaerat distinctio commodi recusandae voluptatibus cum voluptatum placeat aperiam ut nulla ducimus tempore, itaque officiis eaque error porro ipsa ipsam. A provident debitis laboriosam accusamus blanditiis ducimus aspernatur ipsam repellat cupiditate. Autem iste quibusdam qui distinctio. Necessitatibus aliquam itaque deleniti illo at inventore molestiae doloribus atque praesentium.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab fugit facilis consequuntur necessitatibus expedita aut eaque, minima blanditiis porro architecto repellat illum ea quisquam sequi incidunt exercitationem iste vero perspiciatis ducimus ipsam, ex accusamus quos consequatur? Accusantium ducimus, voluptatibus pariatur eius repudiandae ut. Impedit nihil, reprehenderit obcaecati tempore odit sunt. Excepturi, totam, quaerat distinctio commodi recusandae voluptatibus cum voluptatum placeat aperiam ut nulla ducimus tempore, itaque officiis eaque error porro ipsa ipsam. A provident debitis laboriosam accusamus blanditiis ducimus aspernatur ipsam repellat cupiditate. Autem iste quibusdam qui distinctio. Necessitatibus aliquam itaque deleniti illo at inventore molestiae doloribus atque praesentium.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab fugit facilis consequuntur necessitatibus expedita aut eaque, minima blanditiis porro architecto repellat illum ea quisquam sequi incidunt exercitationem iste vero perspiciatis ducimus ipsam, ex accusamus quos consequatur? Accusantium ducimus, voluptatibus pariatur eius repudiandae ut. Impedit nihil, reprehenderit obcaecati tempore odit sunt. Excepturi, totam, quaerat distinctio commodi recusandae voluptatibus cum voluptatum placeat aperiam ut nulla ducimus tempore, itaque officiis eaque error porro ipsa ipsam. A provident debitis laboriosam accusamus blanditiis ducimus aspernatur ipsam repellat cupiditate. Autem iste quibusdam qui distinctio. Necessitatibus aliquam itaque deleniti illo at inventore molestiae doloribus atque praesentium.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab fugit facilis consequuntur necessitatibus expedita aut eaque, minima blanditiis porro architecto repellat illum ea quisquam sequi incidunt exercitationem iste vero perspiciatis ducimus ipsam, ex accusamus quos consequatur? Accusantium ducimus, voluptatibus pariatur eius repudiandae ut. Impedit nihil, reprehenderit obcaecati tempore odit sunt. Excepturi, totam, quaerat distinctio commodi recusandae voluptatibus cum voluptatum placeat aperiam ut nulla ducimus tempore, itaque officiis eaque error porro ipsa ipsam. A provident debitis laboriosam accusamus blanditiis ducimus aspernatur ipsam repellat cupiditate. Autem iste quibusdam qui distinctio. Necessitatibus aliquam itaque deleniti illo at inventore molestiae doloribus atque praesentium.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab fugit facilis consequuntur necessitatibus expedita aut eaque, minima blanditiis porro architecto repellat illum ea quisquam sequi incidunt exercitationem iste vero perspiciatis ducimus ipsam, ex accusamus quos consequatur? Accusantium ducimus, voluptatibus pariatur eius repudiandae ut. Impedit nihil, reprehenderit obcaecati tempore odit sunt. Excepturi, totam, quaerat distinctio commodi recusandae voluptatibus cum voluptatum placeat aperiam ut nulla ducimus tempore, itaque officiis eaque error porro ipsa ipsam. A provident debitis laboriosam accusamus blanditiis ducimus aspernatur ipsam repellat cupiditate. Autem iste quibusdam qui distinctio. Necessitatibus aliquam itaque deleniti illo at inventore molestiae doloribus atque praesentium.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab fugit facilis consequuntur necessitatibus expedita aut eaque, minima blanditiis porro architecto repellat illum ea quisquam sequi incidunt exercitationem iste vero perspiciatis ducimus ipsam, ex accusamus quos consequatur? Accusantium ducimus, voluptatibus pariatur eius repudiandae ut. Impedit nihil, reprehenderit obcaecati tempore odit sunt. Excepturi, totam, quaerat distinctio commodi recusandae voluptatibus cum voluptatum placeat aperiam ut nulla ducimus tempore, itaque officiis eaque error porro ipsa ipsam. A provident debitis laboriosam accusamus blanditiis ducimus aspernatur ipsam repellat cupiditate. Autem iste quibusdam qui distinctio. Necessitatibus aliquam itaque deleniti illo at inventore molestiae doloribus atque praesentium.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab fugit facilis consequuntur necessitatibus expedita aut eaque, minima blanditiis porro architecto repellat illum ea quisquam sequi incidunt exercitationem iste vero perspiciatis ducimus ipsam, ex accusamus quos consequatur? Accusantium ducimus, voluptatibus pariatur eius repudiandae ut. Impedit nihil, reprehenderit obcaecati tempore odit sunt. Excepturi, totam, quaerat distinctio commodi recusandae voluptatibus cum voluptatum placeat aperiam ut nulla ducimus tempore, itaque officiis eaque error porro ipsa ipsam. A provident debitis laboriosam accusamus blanditiis ducimus aspernatur ipsam repellat cupiditate. Autem iste quibusdam qui distinctio. Necessitatibus aliquam itaque deleniti illo at inventore molestiae doloribus atque praesentium.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab fugit facilis consequuntur necessitatibus expedita aut eaque, minima blanditiis porro architecto repellat illum ea quisquam sequi incidunt exercitationem iste vero perspiciatis ducimus ipsam, ex accusamus quos consequatur? Accusantium ducimus, voluptatibus pariatur eius repudiandae ut. Impedit nihil, reprehenderit obcaecati tempore odit sunt. Excepturi, totam, quaerat distinctio commodi recusandae voluptatibus cum voluptatum placeat aperiam ut nulla ducimus tempore, itaque officiis eaque error porro ipsa ipsam. A provident debitis laboriosam accusamus blanditiis ducimus aspernatur ipsam repellat cupiditate. Autem iste quibusdam qui distinctio. Necessitatibus aliquam itaque deleniti illo at inventore molestiae doloribus atque praesentium.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab fugit facilis consequuntur necessitatibus expedita aut eaque, minima blanditiis porro architecto repellat illum ea quisquam sequi incidunt exercitationem iste vero perspiciatis ducimus ipsam, ex accusamus quos consequatur? Accusantium ducimus, voluptatibus pariatur eius repudiandae ut. Impedit nihil, reprehenderit obcaecati tempore odit sunt. Excepturi, totam, quaerat distinctio commodi recusandae voluptatibus cum voluptatum placeat aperiam ut nulla ducimus tempore, itaque officiis eaque error porro ipsa ipsam. A provident debitis laboriosam accusamus blanditiis ducimus aspernatur ipsam repellat cupiditate. Autem iste quibusdam qui distinctio. Necessitatibus aliquam itaque deleniti illo at inventore molestiae doloribus atque praesentium.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab fugit facilis consequuntur necessitatibus expedita aut eaque, minima blanditiis porro architecto repellat illum ea quisquam sequi incidunt exercitationem iste vero perspiciatis ducimus ipsam, ex accusamus quos consequatur? Accusantium ducimus, voluptatibus pariatur eius repudiandae ut. Impedit nihil, reprehenderit obcaecati tempore odit sunt. Excepturi, totam, quaerat distinctio commodi recusandae voluptatibus cum voluptatum placeat aperiam ut nulla ducimus tempore, itaque officiis eaque error porro ipsa ipsam. A provident debitis laboriosam accusamus blanditiis ducimus aspernatur ipsam repellat cupiditate. Autem iste quibusdam qui distinctio. Necessitatibus aliquam itaque deleniti illo at inventore molestiae doloribus atque praesentium.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab fugit facilis consequuntur necessitatibus expedita aut eaque, minima blanditiis porro architecto repellat illum ea quisquam sequi incidunt exercitationem iste vero perspiciatis ducimus ipsam, ex accusamus quos consequatur? Accusantium ducimus, voluptatibus pariatur eius repudiandae ut. Impedit nihil, reprehenderit obcaecati tempore odit sunt. Excepturi, totam, quaerat distinctio commodi recusandae voluptatibus cum voluptatum placeat aperiam ut nulla ducimus tempore, itaque officiis eaque error porro ipsa ipsam. A provident debitis laboriosam accusamus blanditiis ducimus aspernatur ipsam repellat cupiditate. Autem iste quibusdam qui distinctio. Necessitatibus aliquam itaque deleniti illo at inventore molestiae doloribus atque praesentium.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab fugit facilis consequuntur necessitatibus expedita aut eaque, minima blanditiis porro architecto repellat illum ea quisquam sequi incidunt exercitationem iste vero perspiciatis ducimus ipsam, ex accusamus quos consequatur? Accusantium ducimus, voluptatibus pariatur eius repudiandae ut. Impedit nihil, reprehenderit obcaecati tempore odit sunt. Excepturi, totam, quaerat distinctio commodi recusandae voluptatibus cum voluptatum placeat aperiam ut nulla ducimus tempore, itaque officiis eaque error porro ipsa ipsam. A provident debitis laboriosam accusamus blanditiis ducimus aspernatur ipsam repellat cupiditate. Autem iste quibusdam qui distinctio. Necessitatibus aliquam itaque deleniti illo at inventore molestiae doloribus atque praesentium.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab fugit facilis consequuntur necessitatibus expedita aut eaque, minima blanditiis porro architecto repellat illum ea quisquam sequi incidunt exercitationem iste vero perspiciatis ducimus ipsam, ex accusamus quos consequatur? Accusantium ducimus, voluptatibus pariatur eius repudiandae ut. Impedit nihil, reprehenderit obcaecati tempore odit sunt. Excepturi, totam, quaerat distinctio commodi recusandae voluptatibus cum voluptatum placeat aperiam ut nulla ducimus tempore, itaque officiis eaque error porro ipsa ipsam. A provident debitis laboriosam accusamus blanditiis ducimus aspernatur ipsam repellat cupiditate. Autem iste quibusdam qui distinctio. Necessitatibus aliquam itaque deleniti illo at inventore molestiae doloribus atque praesentium.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab fugit facilis consequuntur necessitatibus expedita aut eaque, minima blanditiis porro architecto repellat illum ea quisquam sequi incidunt exercitationem iste vero perspiciatis ducimus ipsam, ex accusamus quos consequatur? Accusantium ducimus, voluptatibus pariatur eius repudiandae ut. Impedit nihil, reprehenderit obcaecati tempore odit sunt. Excepturi, totam, quaerat distinctio commodi recusandae voluptatibus cum voluptatum placeat aperiam ut nulla ducimus tempore, itaque officiis eaque error porro ipsa ipsam. A provident debitis laboriosam accusamus blanditiis ducimus aspernatur ipsam repellat cupiditate. Autem iste quibusdam qui distinctio. Necessitatibus aliquam itaque deleniti illo at inventore molestiae doloribus atque praesentium.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab fugit facilis consequuntur necessitatibus expedita aut eaque, minima blanditiis porro architecto repellat illum ea quisquam sequi incidunt exercitationem iste vero perspiciatis ducimus ipsam, ex accusamus quos consequatur? Accusantium ducimus, voluptatibus pariatur eius repudiandae ut. Impedit nihil, reprehenderit obcaecati tempore odit sunt. Excepturi, totam, quaerat distinctio commodi recusandae voluptatibus cum voluptatum placeat aperiam ut nulla ducimus tempore, itaque officiis eaque error porro ipsa ipsam. A provident debitis laboriosam accusamus blanditiis ducimus aspernatur ipsam repellat cupiditate. Autem iste quibusdam qui distinctio. Necessitatibus aliquam itaque deleniti illo at inventore molestiae doloribus atque praesentium.
+      <ParallaxBanner
+        layers={[
+          {
+            children: <Image
+              src="/banerParallax.jpg"
+              alt="Sahara Desert landscape"
+              fill
+              objectFit="cover"
+              className="filter brightness-75"
+            />,
+            expanded: false,
+            speed: -70,
+          },
+          {
+            children: (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <Image src="/tituloBaner.png" alt="titulo banner" width={432} height={135} />
+              </div>
+            ),
+            speed: -45,
+          },
+        ]}
+        className="h-screen"
+      />
+      <main className="h-screen">
+        <div className="h-52 flex flex-row items-center justify-center bg-red-300">
+          {partyTime ? (
+            <Fade direction="up" delay={300} triggerOnce={true} duration={800}>
+              <h1>Llego el dia!</h1>
+            </Fade>
+          ) : (
+            <Fade direction="up" delay={300} triggerOnce={false} duration={800} className="flex items-center justify-center">
+              <div className="flex flex-col items-center justify-center bg-gray-50 w-28 h-28 rounded-full">
+                <span className="text-4xl text-gray-500">{days}</span>
+                <span className="text-red-300 text-xl font-semibold ">Days</span>
+              </div>
+
+              <span className="mx-3 text-gray-50 text-3xl font-semibold">:</span>
+
+              <div className="flex flex-col items-center justify-center bg-gray-50 w-28 h-28 rounded-full">
+                <span className="text-4xl text-gray-500">{hours}</span>
+                <span className="text-red-300 text-xl font-semibold">Hs</span>
+              </div>
+
+              <span className="mx-3 text-gray-50 text-3xl font-semibold">:</span>
+
+              <div className="flex flex-col items-center justify-center bg-gray-50 w-28 h-28 rounded-full">
+                <span className="text-4xl text-gray-500">{minutes}</span>
+                <span className="text-red-300 text-xl font-semibold">Min</span>
+              </div>
+
+              <span className="mx-3 text-gray-50 text-3xl font-semibold">:</span>
+
+              <div className="flex flex-col items-center justify-center bg-gray-50 w-28 h-28 rounded-full">
+                <span className="text-4xl text-gray-500">{seconds}</span>
+                <span className="text-red-300 text-xl font-semibold">Seg</span>
+              </div>
+            </Fade>
+          )}
         </div>
       </main>
     </section>
