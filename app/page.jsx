@@ -8,8 +8,7 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { useMediaQuery } from 'react-responsive'
 
 export default function Home() {
-  let queryData = useMediaQuery({ query: '(max-width: 1024px)' })
-  console.log(queryData);
+  let queryData = useMediaQuery({query: '(max-width: 1024px)'})
 
   return (
     <section>
