@@ -40,9 +40,9 @@ export default function Time() {
 
   return (
     <section className="">
-      <div className="h-52 flex flex-col items-center justify-center bg-red-300">
+      <div className="h-40 sm:h-52 flex flex-col items-center justify-center bg-red-300">
         <Fade direction="up" delay={300} triggerOnce={true} duration={800}>
-          <h2 className="text-gray-50 sm:text-3xl font-light mb-3">Falta:</h2>
+          <h2 className="text-gray-50 text-2xl sm:text-3xl font-light mb-3">Falta:</h2>
         </Fade>
         {partyTime ? (
           <Fade direction="up" delay={300} triggerOnce={true} duration={800}>
@@ -51,30 +51,30 @@ export default function Time() {
         ) : (
           <Fade direction="up" delay={300} triggerOnce={true} duration={800} >
             <div className="flex sm:flex-row items-center justify-center">
-              <div className="flex flex-col items-center justify-center bg-gray-50 w-16 h-16 sm:w-28 sm:h-28 rounded-full">
-                <span className="sm:text-4xl text-gray-500">{days}</span>
-                <span className="text-red-300 sm:text-xl font-semibold ">Days</span>
+              <div className="flex flex-col items-center justify-center bg-gray-50 w-20 h-20 sm:w-28 sm:h-28 rounded-full">
+                <span className="text-2xl sm:text-4xl text-gray-500">{days}</span>
+                <span className="text-red-300 text-lg sm:text-xl font-semibold ">Dias</span>
               </div>
 
-              <span className="mx-1 sm:mx-3 text-gray-50 sm:text-3xl font-semibold">:</span>
+              <span className="mx-1 sm:mx-3 text-gray-50 text-2xl sm:text-3xl font-semibold">:</span>
 
-              <div className="flex flex-col items-center justify-center bg-gray-50 w-16 h-16 sm:w-28 sm:h-28 rounded-full">
-                <span className="sm:text-4xl text-gray-500">{hours}</span>
-                <span className="text-red-300 sm:text-xl font-semibold">Hs</span>
+              <div className="flex flex-col items-center justify-center bg-gray-50 w-20 h-20 sm:w-28 sm:h-28 rounded-full">
+                <span className="text-2xl sm:text-4xl text-gray-500">{hours}</span>
+                <span className="text-red-300 text-lg sm:text-xl font-semibold">Hs.</span>
               </div>
 
-              <span className="mx-1 sm:mx-3 text-gray-50 sm:text-3xl font-semibold">:</span>
+              <span className="mx-1 sm:mx-3 text-gray-50 text-2xl sm:text-3xl font-semibold">:</span>
 
-              <div className="flex flex-col items-center justify-center bg-gray-50 w-16 h-16 sm:w-28 sm:h-28 rounded-full">
-                <span className="sm:text-4xl text-gray-500">{minutes}</span>
-                <span className="text-red-300 sm:text-xl font-semibold">Min</span>
+              <div className="flex flex-col items-center justify-center bg-gray-50 w-20 h-20 sm:w-28 sm:h-28 rounded-full">
+                <span className="text-2xl sm:text-4xl text-gray-500">{minutes}</span>
+                <span className="text-red-300 text-lg sm:text-xl font-semibold">Min.</span>
               </div>
 
-              <span className="mx-1 sm:mx-3 text-gray-50 sm:text-3xl font-semibold">:</span>
+              <span className="mx-1 sm:mx-3 text-gray-50 text-2xl sm:text-3xl font-semibold">:</span>
 
-              <div className="flex flex-col items-center justify-center bg-gray-50 w-16 h-16 sm:w-28 sm:h-28 rounded-full">
-                <span className="sm:text-4xl text-gray-500">{seconds}</span>
-                <span className="text-red-300 sm:text-xl font-semibold">Seg</span>
+              <div className="flex flex-col items-center justify-center bg-gray-50 w-20 h-20 sm:w-28 sm:h-28 rounded-full">
+                <span className="text-2xl sm:text-4xl text-gray-500">{seconds}</span>
+                <span className="text-red-300 text-lg sm:text-xl font-semibold">Seg.</span>
               </div>
             </div>
           </Fade>
