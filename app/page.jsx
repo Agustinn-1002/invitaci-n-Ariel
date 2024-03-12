@@ -1,12 +1,11 @@
-/* eslint-disable @next/next/no-img-element */
 'use client'
 import Image from "next/image";
+import { Fade } from "react-awesome-reveal";
 import { ParallaxBanner } from "react-scroll-parallax";
 import Time from "./components/Time";
 
 
 export default function Home() {
-
 
   return (
     <section>
@@ -18,16 +17,16 @@ export default function Home() {
               alt="Sahara Desert landscape"
               fill
               objectFit="cover"
-              className="filter brightness-75"
+              className="filter brightness-75 w-full h-full"
             />,
             expanded: false,
-            speed: -70,
+            speed: -60,
           },
           {
             children: (
-              <div className="absolute inset-0 flex items-center justify-center">
+              <Fade delay={100} triggerOnce={true} duration={800} className="absolute inset-0 flex items-center justify-center">
                 <Image src="/tituloBaner.png" alt="titulo banner" width={432} height={135} />
-              </div>
+              </Fade>
             ),
             speed: -45,
           },
@@ -35,6 +34,9 @@ export default function Home() {
         className="h-screen"
       />
       <Time />
+      <div className="h-screen">
+
+      </div>
     </section>
   );
 }
