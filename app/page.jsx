@@ -7,9 +7,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { useMediaQuery } from 'react-responsive'
 import PageInfo from "./components/PageInfo";
+import Galeria from "./components/Galeria";
 
 export default function Home() {
-  let queryData = useMediaQuery({query: '(max-width: 1024px)'})
+  let queryData = useMediaQuery({ query: '(max-width: 1024px)' })
 
   return (
     <section>
@@ -46,7 +47,8 @@ export default function Home() {
         <FontAwesomeIcon icon={faChevronDown} className='fa-bounce text-5xl data' />
       </Fade>
       <Time />
-      <PageInfo /> 
+      <PageInfo />
+      <Galeria />
       <div className="h-screen">
 
       </div>
