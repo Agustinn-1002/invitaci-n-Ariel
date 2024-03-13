@@ -1,0 +1,16 @@
+.gallery{
+
+}
+
+.gallery .pics {
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+.pics img{
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+}
