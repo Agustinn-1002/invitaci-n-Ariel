@@ -6,6 +6,7 @@ import Time from "./components/Time";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { useMediaQuery } from 'react-responsive'
+import PageInfo from "./components/PageInfo";
 
 export default function Home() {
   let queryData = useMediaQuery({query: '(max-width: 1024px)'})
@@ -45,7 +46,7 @@ export default function Home() {
         <FontAwesomeIcon icon={faChevronDown} className='fa-bounce text-5xl data' />
       </Fade>
       <Time />
-
+      <PageInfo /> 
       <div className="h-screen">
 
       </div>
