@@ -85,7 +85,7 @@ export default function Galeria() {
             {
                 imagesArray.map((e, index) => {
                     return (
-                        <Fade cascade direction='up' delay={500} triggerOnce={true} key={index} >
+                        <Fade cascade direction='up' delay={200} triggerOnce={true} key={index} >
                             <div className={`${style.pics}`} onClick={() => onClickImage(e.id)}>
                                 <img src={e.src} alt={e.id} />
                             </div>
