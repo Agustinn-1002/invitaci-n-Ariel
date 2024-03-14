@@ -66,7 +66,7 @@ export default function Galeria() {
                 setFullImageView(nextImage[0])
                 setIdImage(id)
             }
-        }, 200)
+        }, 100)
 
     }
     const prevImage = (id) => {
@@ -78,7 +78,7 @@ export default function Galeria() {
                 setFullImageView(nextImage[0])
                 setIdImage(id)
             }
-        }, 200)
+        }, 100)
     }
     return (
         <div className={`${style.gallery} w-2/3 xl:px-24 my-20 mx-auto grid md:grid-rows-2 md:grid-cols-4 justify-items-center relative`} >
