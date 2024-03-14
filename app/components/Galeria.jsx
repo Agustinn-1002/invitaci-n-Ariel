@@ -97,7 +97,7 @@ export default function Galeria() {
             <div className={`${status ? 'opacity-100 z-40' : 'opacity-0 -z-50'} select-none fixed top-0 h-screen w-full duration-500`} style={{ background: 'rgb(0,0,0,0.5)', backdropFilter: 'blur(10px)' }}>
                 <h1 className='z-50  absolute right-5 top-8 md:right-20 md:top-10 text-4xl text-white cursor-pointer' onClick={() => { setStatus(false); setIdImage(false) }}>X</h1>
                 <div className='z-50 h-full flex items-center justify-center' >
-                    <img src={fullImageView.src} alt={fullImageView.id} className={`${idImage ? 'opacity-100' : 'opacity-50'} p-10 md:w-2/3 lg:w-1/3 duration-500`} />
+                    <img src={fullImageView.src} alt={fullImageView.id} className={`${idImage ? 'opacity-100' : 'opacity-30'} p-10 md:w-2/3 lg:w-1/3 duration-500`} />
                 </div>
                 <div className={`${status ? 'opacity-100' : 'opacity-0 -z-50'} z-40 absolute left-0 md:left-10 top-0 bottom-0 flex items-center text-5xl mdtext-6xl duration-500`} >
                     <FontAwesomeIcon icon={faChevronDown} className={`rotate-90 select-none ${fullImageView.id === 1 ? 'text-gray-400 cursor-not-allowed' : 'text-white cursor-pointer'}`} onClick={() => fullImageView.id != 1 ? prevImage(fullImageView.id - 1) : null} />
