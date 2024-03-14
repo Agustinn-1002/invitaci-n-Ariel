@@ -8,6 +8,7 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { useMediaQuery } from 'react-responsive'
 import PageInfo from "./components/PageInfo";
 import Galeria from "./components/Galeria";
+import Confirmation from "./components/Confirmation";
 
 export default function Home() {
   let queryData = useMediaQuery({ query: '(max-width: 1024px)' })
@@ -49,6 +50,7 @@ export default function Home() {
       <Time />
       <PageInfo />
       <Galeria />
+      <Confirmation />
       <div className="h-screen">
 
       </div>

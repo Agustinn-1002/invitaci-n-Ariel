@@ -45,7 +45,7 @@ const imagesArray = [
 ];
 
 export default function Galeria() {
-    
+
     const [fullImageView, setFullImageView] = useState([])
     const [status, setStatus] = useState(false)
     const [idImage, setIdImage] = useState(false)
@@ -81,7 +81,7 @@ export default function Galeria() {
         }, 100)
     }
     return (
-        <div className={`${style.gallery} w-2/3 xl:px-24 my-20 mx-auto grid md:grid-rows-2 md:grid-cols-4 justify-items-center relative`} >
+        <div className={`${style.gallery} w-2/1 1xl:w-2/3  xl:px-24 my-20 mx-auto grid sm:grid-cols-2 md:grid-rows-2 md:grid-cols-4 justify-items-center relative`} >
             {
                 imagesArray.map((e, index) => {
                     return (
