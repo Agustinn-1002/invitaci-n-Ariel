@@ -2,7 +2,6 @@
 import style from '@/app/style/galeria.module.css'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Image from 'next/image';
 import { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 
@@ -42,6 +41,10 @@ const imagesArray = [
         id: 8,
         src: '/8.jpg',
     },
+    // {
+    //     id: 9,
+    //     src: '/9.jpg',
+    // },
 ];
 
 export default function Galeria() {
@@ -81,7 +84,7 @@ export default function Galeria() {
         }, 100)
     }
     return (
-        <div className={`${style.gallery} w-2/1 1xl:w-2/3  xl:px-24 my-20 mx-auto grid sm:grid-cols-2 md:grid-rows-2 md:grid-cols-4 justify-items-center relative`} >
+        <div className={`${style.gallery} w-2/1 1xl:w-2/3  xl:px-24 my-20 mx-auto grid grid-cols-2 md:grid-cols-4 justify-items-center gap-4 sm:gap-x-0 px-2 sm:gap-y-5`} >
             {
                 imagesArray.map((e, index) => {
                     return (

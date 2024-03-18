@@ -9,6 +9,9 @@ import { useMediaQuery } from 'react-responsive'
 import PageInfo from "./components/PageInfo";
 import Galeria from "./components/Galeria";
 import Confirmation from "./components/Confirmation";
+import Ig from "./components/Ig";
+import Bank from "./components/Bank";
+import Thanks from "./components/Thanks";
 
 export default function Home() {
   let queryData = useMediaQuery({ query: '(max-width: 1024px)' })
@@ -51,9 +54,9 @@ export default function Home() {
       <PageInfo />
       <Galeria />
       <Confirmation />
-      <div className="h-screen">
-
-      </div>
+      <Ig />
+      <Bank />
+      <Thanks />
     </section>
   );
 }

@@ -2,10 +2,9 @@
     -webkit-transition: all 0.35s ease;
     transition: all 0.35s ease;
     cursor: pointer;
-    margin-bottom: 12px;
 }
 
-.pics img{
+.pics img {
     object-fit: cover;
     width: 250px;
     height: 250px;
@@ -13,6 +12,6 @@
     transition: all 0.35s ease;
 }
 
-.pics img:hover{
+.pics img:hover {
     scale: 108%;
 }

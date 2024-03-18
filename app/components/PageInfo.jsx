@@ -19,7 +19,7 @@ export default function PageInfo() {
                     <p>Clickeá en el botón de abajo y encontrá las indicaciones para llegar, ¡nos vemos!😉</p>
                 </div>
                 <Link target='_blank' href={'https://maps.app.goo.gl/nEno1iCiY9uFithR8'}>
-                    <button className="mt-8 bg-second text-xl font-semibold text-gray-100 px-5 py-3 rounded-xl hover:bg-white hover:outline-second hover:outline hover:outline-1 hover:text-second duration-200">COMO LLEGAR</button>
+                    <button className='mt-6 sm:mb-0 rounded-3xl bg-second text-lg text-white px-6 py-2 hover:bg-transparent hover:outline-second hover:outline hover:outline-1 hover:text-second duration-200'>COMO LLEGAR</button>
                 </Link>
             </div>
         </Fade>

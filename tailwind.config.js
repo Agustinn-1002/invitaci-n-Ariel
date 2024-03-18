@@ -14,14 +14,14 @@ module.exports = {
       },
       colors: {
         "main": "#fca5a5",
-        'second': '#94a3b8',
+        'second': 'rgb(0, 0, 0, 0.8 )',
         'tittle': '#374151',
         'paragraph': '#4b5563'
       },
       screens: {
         '1xl': '1440px'
       },
-      height:{
+      height: {
         '100': '30rem'
       }
     },
