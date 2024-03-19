@@ -21,14 +21,14 @@ export default function Confirmation() {
                             objectFit="cover"
                             className="w-full h-full"
                         />,
-
-                        speed:  -30,
+                        
+                        speed:  -20,
                     },
                     {
                         children: (
-                            <div className="h-full flex justify-center items-center text-center px-8 md:px-0">
+                            <div className="h-full flex justify-center items-center text-center px-8 1md:px-0">
                                 <Fade triggerOnce={true} duration={800} delay={200} direction='down'>
-                                    <div className="flex flex-col justify-center items-center bg-black bg-opacity-15 md:bg-opacity-25 py-5 px-1 rounded-3xl">
+                                    <div className="flex flex-col justify-center items-center bg-black bg-opacity-15 1md:bg-opacity-25 py-5 px-1 rounded-3xl">
                                         <h2 className="my-3 text-white text-3xl sm:text-2xl">
                                             CONFIRMACIÓN DE ASISTENCIA
                                         </h2>

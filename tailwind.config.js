@@ -19,7 +19,8 @@ module.exports = {
         'paragraph': '#4b5563'
       },
       screens: {
-        '1xl': '1440px'
+        '1md': '1100px',
+        '1xl': '1700px'
       },
       height: {
         '100': '30rem'
