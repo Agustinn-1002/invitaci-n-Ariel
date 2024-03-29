@@ -12,6 +12,14 @@
     transition: all 0.35s ease;
 }
 
+@media screen and (width <= 520px) {
+    .pics img {
+        
+        height: 200px;
+   
+    }
+}
+
 .pics img:hover {
     scale: 108%;
 }

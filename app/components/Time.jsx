@@ -9,7 +9,7 @@ export default function Time() {
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
-    const target = new Date("05/01/2024 23:59:59");
+    const target = new Date("05/10/2024 23:59:59");
 
     const interval = setInterval(() => {
       const now = new Date();
@@ -41,15 +41,16 @@ export default function Time() {
   return (
     <section className="">
       <div className="h-40 sm:h-52 flex flex-col items-center justify-center bg-main">
-        <Fade direction="up" delay={300} triggerOnce={true} duration={800}>
-          <h2 className="text-gray-50 text-2xl sm:text-3xl font-light mb-3">Falta:</h2>
-        </Fade>
-        {partyTime ? (
+        {!partyTime ? (
           <Fade direction="up" delay={300} triggerOnce={true} duration={800}>
-            <h1>Llego el dia!</h1>
+            <h1 className="text-gray-50 text-2xl sm:text-3xl font-medium mb-3 uppercase">Llego el Gran dia!</h1>
+            <h2 className="text-gray-50 text-1xl sm:text-2xl font-light mb-3">Te Espero para esta Gran Noche</h2>
           </Fade>
         ) : (
           <Fade direction="up" delay={300} triggerOnce={true} duration={800} >
+        <Fade direction="up" delay={300} triggerOnce={true} duration={800}>
+          <h2 className="text-gray-50 text-2xl sm:text-3xl font-light mb-3">Falta:</h2>
+        </Fade>
             <div className="flex sm:flex-row items-center justify-center">
               <div className="flex flex-col items-center justify-center bg-gray-50 p-9 w-16 h-16 sm:w-28 sm:h-28 rounded-full">
                 <span className="text-2xl sm:text-4xl text-gray-500">{days}</span>

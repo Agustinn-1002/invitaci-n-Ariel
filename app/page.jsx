@@ -30,23 +30,16 @@ export default function Home() {
             />,
             expanded: false,
             speed: queryData ? 0 : -60,
-          },
-          {
-            children: (
-              <div>
-                <Fade delay={100} triggerOnce={true} duration={1500} className="absolute inset-0 flex items-center justify-center">
-                  <Zoom delay={100} triggerOnce={true} duration={1000}>
-                    <Image src="/tituloBaner.png" alt="titulo banner" width={439} height={250} />
-                  </Zoom>
-                </Fade>
+          }
 
-              </div>
-            ),
-            speed: queryData ? 0 : -30,
-          },
         ]}
         className="h-screen"
       />
+      <Fade delay={100} triggerOnce={true} duration={1500} className="absolute inset-0 flex items-center justify-center">
+        <Zoom delay={100} triggerOnce={true} duration={1000}>
+          <Image src="/tituloBaner.png" alt="titulo banner" width={439} height={250} />
+        </Zoom>
+      </Fade>
       <Fade duration={1500} delay={100} className="text-white absolute bottom-20 w-full text-center text-xl ">
         <FontAwesomeIcon icon={faChevronDown} className='fa-bounce text-5xl data' />
       </Fade>
