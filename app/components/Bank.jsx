@@ -31,8 +31,8 @@ export default function Bank() {
                         <FontAwesomeIcon icon={faGift} className="text-6xl sm:text-7xl text-white" />
                     </div>
                     <div className="flex flex-col px-8 leading-7 text-white sm:text-lg">
-                        <p>El mejor regalo es que vengas,</p>
-                        <p className="mb-4">pero si deseas regalarme algo, podés colaborar con mis sueños y anhelos.</p>
+                        <p>Lo mejor para mi es que vengas,</p>
+                        <p className="mb-4">pero si deseas regalarme algo mas, podés colaborar con mis sueños y anhelos.</p>
                         
                         <p>En el salón dispondremos de una urna para depositar sobres,</p>
                         <p>o podés trasferirme</p>
