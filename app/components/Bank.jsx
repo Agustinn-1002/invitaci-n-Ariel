@@ -28,7 +28,7 @@ export default function Bank() {
             <Fade cascade direction="up" delay={200} triggerOnce={true} duration={1000} >
                 <div className="flex flex-col justify-items-center items-center text-center mx-auto py-12 bg-second ">
                     <div className="mb-8">
-                        <FontAwesomeIcon icon={faGift} className="text-6xl sm:text-7xl text-white" />
+                        <FontAwesomeIcon icon={faGift} className="fa-beat text-6xl sm:text-7xl text-white" />
                     </div>
                     <div className="flex flex-col px-8 leading-7 text-white sm:text-lg">
                         <p>Lo mejor para mi es que vengas,</p>
@@ -38,7 +38,7 @@ export default function Bank() {
                         <p>o podés trasferirme</p>
                     </div>
 
-                    <button onClick={() => setInput(true)} className=' text-center mt-6 rounded-3xl bg-main text-lg text-white px-6 py-2 hover:bg-transparent hover:outline-main hover:outline hover:outline-1 hover:text-main duration-200'>VER DATOS</button>
+                    <button onClick={() => setInput(true)} className=' text-center mt-6 rounded-3xl bg-main text-lg text-white px-6 py-2 hover:bg-transparent hover:outline-white hover:outline hover:outline-1 hover:text-white duration-200'>VER DATOS</button>
 
                 </div>
             </Fade>
