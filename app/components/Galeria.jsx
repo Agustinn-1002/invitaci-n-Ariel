@@ -33,14 +33,14 @@ const imagesArray = [
         id: 6,
         src: '/6.jpg',
     },
-    {
-        id: 7,
-        src: '/7.jpg',
-    },
-    {
-        id: 8,
-        src: '/8.jpg',
-    },
+    // {
+    //     id: 7,
+    //     src: '/7.jpg',
+    // },
+    // {
+    //     id: 8,
+    //     src: '/8.jpg',
+    // },
     // {
     //     id: 9,
     //     src: '/9.jpg',
@@ -84,7 +84,7 @@ export default function Galeria() {
         }, 100)
     }
     return (
-        <div className={`${style.gallery} w-2/1 1xl:w-2/3  xl:px-24 my-20 mx-auto grid grid-cols-2 1md:grid-cols-4 justify-items-center gap-4 sm:gap-x-0 px-2 sm:gap-y-5`} >
+        <div className={`${style.gallery} w-2/1 1xl:w-2/3  xl:px-36 my-20 mx-auto grid grid-cols-2 1md:grid-cols-3 justify-items-center gap-4 sm:gap-x-0 px-2 sm:gap-y-5`} >
             {
                 imagesArray.map((e, index) => {
                     return (

@@ -14,11 +14,12 @@ export default function PageInfo() {
                     Fiesta
                 </h2>
                 <div className="flex flex-col px-8 leading-7 text-paragraph sm:text-lg">
-                    <p>¡Te espero el Sábado 25 de noviembre de 21:00 a 05:00 hs para festejar este gran momento de mi vida!</p>
-                    <p>Salón Campo Norte, Ruta E53, Córdoba.</p>
+                    <p>¡Te espero el Sábado 11 de Mayo de 21:00 hs para festejar este gran momento de mi vida!</p>
+                    <p>Palatium Salón Novus, Circuito turistico Challao. </p>
+                    <p className="mb-2">{'(A 500 metros de la rotonda del Sauntiario del Challao)'}</p>
                     <p>Clickeá en el botón de abajo y encontrá las indicaciones para llegar, ¡nos vemos!😉</p>
                 </div>
-                <Link target='_blank' href={'https://maps.app.goo.gl/nEno1iCiY9uFithR8'}>
+                <Link target='_blank' href={'https://maps.app.goo.gl/dsJ6fP2r1zonDyAk9'}>
                     <button className='mt-6 sm:mb-0 rounded-3xl bg-second text-lg text-white px-6 py-2 hover:bg-transparent hover:outline-second hover:outline hover:outline-1 hover:text-second duration-200'>COMO LLEGAR</button>
                 </Link>
             </div>
