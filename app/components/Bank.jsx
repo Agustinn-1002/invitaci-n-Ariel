@@ -35,7 +35,7 @@ export default function Bank() {
                         <p className="mb-4">pero si deseas regalarme algo mas, podés colaborar con mis sueños y anhelos.</p>
                         
                         <p>En el salón dispondremos de una urna para depositar sobres,</p>
-                        <p>o podés trasferirme</p>
+                        <p>o podés transferirme</p>
                     </div>
 
                     <button onClick={() => setInput(true)} className=' text-center mt-6 rounded-3xl bg-main text-lg text-white px-6 py-2 hover:bg-transparent hover:outline-white hover:outline hover:outline-1 hover:text-white duration-200'>VER DATOS</button>
