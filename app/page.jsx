@@ -22,7 +22,7 @@ export default function Home() {
         layers={[
           {
             children: <Image
-              src="/banerParallax.jpg"
+              src="/SolePortada.png"
               alt="Sahara Desert landscape"
               fill
               objectFit="cover"
@@ -37,7 +37,7 @@ export default function Home() {
       />
       <Fade delay={100} triggerOnce={true} duration={1500} className="absolute inset-0 flex items-center justify-center">
         <Zoom delay={100} triggerOnce={true} duration={1000}>
-          <Image src="/tituloBaner.png" alt="titulo banner" className="px-10 sm:px-0" width={400} height={250} />
+          <Image src="/tituloBaner.png" alt="titulo banner" className="px-10 sm:px-0" width={430} height={250} />
         </Zoom>
       </Fade>
       <Fade duration={1500} delay={100} className="text-white absolute bottom-20 w-full text-center text-xl ">
