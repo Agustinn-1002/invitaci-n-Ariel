@@ -11,7 +11,7 @@ export default function Confirmation() {
         <div className="">
             <ParallaxBanner
                 className="h-100 sm:h-96"
-                
+
                 layers={[
                     {
                         children: <Image
@@ -21,8 +21,8 @@ export default function Confirmation() {
                             objectFit="cover"
                             className="w-full h-full"
                         />,
-                        
-                        speed:  -20,
+
+                        speed: -20,
                     },
                     {
                         children: (
@@ -37,10 +37,10 @@ export default function Confirmation() {
                                             <p><span className="font-bold uppercase">Rogamos puntualidad.</span>  ¡Gracias!</p>
                                         </div>
                                         <div className="mt-8 flex flex-col sm:flex-row">
-                                            <Link target='_blank' href='https://forms.gle/EuU95PHKgFCizuo4S' className='mb-3 sm:mb-0 sm:mr-5 rounded-3xl bg-white text-lg text-main px-5 py-2  hover:bg-transparent hover:outline-white hover:outline hover:outline-1 hover:text-white duration-200'>
+                                            <Link target='_blank' href='https://forms.gle/SjenXQXEdTGdk2JHA' className='mb-3 sm:mb-0 sm:mr-5 rounded-3xl bg-white text-lg text-main px-5 py-2  hover:bg-transparent hover:outline-white hover:outline hover:outline-1 hover:text-white duration-200'>
                                                 <button className="">CONFIRMAR ASISTENCIA</button>
                                             </Link>
-                                           
+
                                         </div>
                                     </div>
                                 </Fade >

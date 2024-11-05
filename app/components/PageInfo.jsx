@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { Fade } from "react-awesome-reveal";
 
+
 export default function PageInfo() {
     return (
         <Fade cascade direction="up" delay={600} triggerOnce={true} duration={1000} >
@@ -14,12 +15,12 @@ export default function PageInfo() {
                     Fiesta
                 </h2>
                 <div className="flex flex-col px-8 leading-7 text-paragraph sm:text-lg">
-                    <p>¡Te espero el Sábado 11 de Mayo de 21:00 hs para festejar este gran momento de mi vida!</p>
-                    <p>Palatium Salón Novus, Circuito turistico Challao. </p>
-                    <p className="mb-2">{'(A 500 metros de la rotonda del Santuario del Challao)'}</p>
-                    <p>Clickeá en el botón de abajo y encontrá las indicaciones para llegar, ¡nos vemos!😉</p>
+                    <p>¡Te espero el Sábado 30 de noviembre a las 21:00 hs para festejar mi cambio de década!</p>
+                    <p>Salón La Olivietta, Dorrego, M5515 Maipú, Mendoza. </p>
+                    <b className="m-5">IMPORTANTE: Porfa, no te olvides de traer tu heladerita con lo que vayas a tomar</b>
+                    <p>Clickeá en el botón de abajo y encontrá las indicaciones para llegar, ¡No faltes!😉</p>
                 </div>
-                <Link target='_blank' href={'https://maps.app.goo.gl/dsJ6fP2r1zonDyAk9'}>
+                <Link target='_blank' href={'https://maps.app.goo.gl/tZpo6s1sYHRU13jG7'}>
                     <button className='mt-6 sm:mb-0 rounded-3xl bg-second text-lg text-white px-6 py-2 hover:bg-transparent hover:outline-second hover:outline hover:outline-1 hover:text-second duration-200'>COMO LLEGAR</button>
                 </Link>
             </div>

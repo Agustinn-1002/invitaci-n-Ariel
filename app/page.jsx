@@ -48,7 +48,6 @@ export default function Home() {
       <Galeria />
       <Confirmation />
       <Ig />
-      <Bank />
       <Thanks />
     </section>
   );
