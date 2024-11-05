@@ -13,7 +13,7 @@ export default function Ig() {
                     DRESS CODE
                 </h2>
                 <div className="flex flex-col px-8 leading-7 text-paragraph sm:text-xl">
-                    <p>Ropa de noche 😉</p>
+                    <p>Ropa cómoda para bailar 😉</p>
                 </div>
             </div>
         </Fade>

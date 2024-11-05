@@ -5,8 +5,8 @@ import "./globals.css";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Pilar - Invitación Mis 15",
-  description: "¡Te espero el Sábado 11 de Mayo de 21:00 hs para festejar este gran momento de mi vida! Palatium Salón Novus, Circuito turistico Challao. (A 500 metros de la rotonda del Santuario del Challao) Esperamos que seas parte de esta gran celebración. ¡Confirmanos tu asistencia! Rogamos puntualidad. ¡Gracias por acompañarme en este momento tan importante!",
+  title: "Sole - 4.0",
+  description: "¡Te espero el Sábado 30 de noviembre a las 21:00 hs para festejar mi cambio de década! Salón La Olivietta, Dorrego, M5515 Maipú, Mendoza. IMPORTANTE: Porfa, no te olvides de traer tu heladerita con lo que vayas a tomar. Clickeá en el botón de abajo y encontrá las indicaciones para llegar, ¡No faltes!",
 
 };
 

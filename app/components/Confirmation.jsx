@@ -33,8 +33,8 @@ export default function Confirmation() {
                                             CONFIRMACIÓN DE ASISTENCIA
                                         </h2>
                                         <div className="flex flex-col px-8 leading-5 text-white sm:text-lg">
-                                            <p className="mb-2">Esperamos que seas parte de esta gran celebración. ¡Confirmanos tu asistencia!</p>
-                                            <p><span className="font-bold uppercase">Rogamos puntualidad.</span>  ¡Gracias!</p>
+                                            <p className="mb-2">Espero que estes presente en esta nueva etapa de mi vida. ¡Confirma tu asistencia!</p>
+                                            <p><span className="font-bold uppercase">No llegues Tarde, no te pierdas de nada.</span>  ¡Gracias!</p>
                                         </div>
                                         <div className="mt-8 flex flex-col sm:flex-row">
                                             <Link target='_blank' href='https://forms.gle/SjenXQXEdTGdk2JHA' className='mb-3 sm:mb-0 sm:mr-5 rounded-3xl bg-white text-lg text-main px-5 py-2  hover:bg-transparent hover:outline-white hover:outline hover:outline-1 hover:text-white duration-200'>
